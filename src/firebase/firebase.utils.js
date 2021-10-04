@@ -3,14 +3,21 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 const config = {
-    apiKey: "AIzaSyB31iO0Zn5QL7ba-mqW31yiz36rBaXiaKA",
-    authDomain: "crwn-db-d5009.firebaseapp.com",
-    projectId: "crwn-db-d5009",
-    storageBucket: "crwn-db-d5009.appspot.com",
-    messagingSenderId: "983678647219",
-    appId: "1:983678647219:web:f1f15159ce810215b3a9c6",
-    measurementId: "G-R5ZXXVQJW7"
- };
+  apiKey: "AIzaSyDRMofR5skT983n1xdwJr8LVCOgloamInE",
+  authDomain: "crwn-db-fbc9c.firebaseapp.com",
+  projectId: "crwn-db-fbc9c",
+  storageBucket: "crwn-db-fbc9c.appspot.com",
+  messagingSenderId: "845299953485",
+  appId: "1:845299953485:web:42a57e4e45434985dc1104",
+  measurementId: "G-LDBC6MTN28"
+};
+
+/*export const createUserProfileDocument = async (userAuth, additionalDdata) => {
+	if(!userAuth) return;
+	const userRef = firestore.doc(`users/${userAuth.uid}`);
+	// const snapShot = await userRef.get();
+	console.log(userRef)
+};*/
 
 firebase.initializeApp(config);
 
