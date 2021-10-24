@@ -1,8 +1,19 @@
 import React from 'react';
 import SHOP_DATA from './Shop.data.js';
 import CollectionPreview from '../../components/preview-collection/collection-preview.js';
+import CollectionsOverview from '../../components/collections-overview/collections-overview.js';
+import {Route} from 'react-router-dom';
+import CollectionPage from '../collection/collection.js';
 
-class ShopPage extends React.Component{
+const ShopPage = ({match}) => {
+	console.log(match)
+	return <div className='shop-page'>
+		<Route exact path={`${match.path}`} component={CollectionsOverview} />
+		<Route path={`${match.path}/:collectionId`} component={CollectionPage} />
+	</div>
+}
+
+/*class ShopPage extends React.Component{
 	constructor(props){
 		super(props);
 
@@ -19,6 +30,7 @@ class ShopPage extends React.Component{
 			}
 		</div>
 	}
-};
+};*/
+
 
 export default ShopPage;
